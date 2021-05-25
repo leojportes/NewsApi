@@ -49,7 +49,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let celulaPosters = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! NewsCollectionViewCell
         let imagePosterUrl = listNews[indexPath.row].urlToImage
         let imageUrl = URL(string: "\(imagePosterUrl)")
-        celulaPosters.posterNews.af_setImage(withURL: imageUrl!)
+        celulaPosters.posterNews.af_setImage(withURL: (imageUrl)!)
         celulaPosters.titleNews.text = listNews[indexPath.row].title
         celulaPosters.overviewNews.text = listNews[indexPath.row].articleDescription
         

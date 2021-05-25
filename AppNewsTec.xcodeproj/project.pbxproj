@@ -19,6 +19,7 @@
 		C1521BE9265C170B004B2E71 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1521BE8265C170B004B2E71 /* NewsCollectionViewCell.swift */; };
 		C1521BF8265C1C68004B2E71 /* RequestNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1521BF7265C1C68004B2E71 /* RequestNews.swift */; };
 		C1521C02265C2890004B2E71 /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1521C01265C2890004B2E71 /* New.swift */; };
+		C1521C6B265D2646004B2E71 /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1521C6A265D2644004B2E71 /* ServiceApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C1521BE8265C170B004B2E71 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C1521BF7265C1C68004B2E71 /* RequestNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNews.swift; sourceTree = "<group>"; };
 		C1521C01265C2890004B2E71 /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
+		C1521C6A265D2644004B2E71 /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
 		DD1C8FA82763E2FF351AEEC7 /* Pods-AppNewsTec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNewsTec.release.xcconfig"; path = "Target Support Files/Pods-AppNewsTec/Pods-AppNewsTec.release.xcconfig"; sourceTree = "<group>"; };
 		EA63AD0D6AA18CBA9EF41ADC /* Pods_AppNewsTec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNewsTec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			children = (
 				C1521C01265C2890004B2E71 /* New.swift */,
 				C1521BE0265C0E57004B2E71 /* News.swift */,
+				C1521C6A265D2644004B2E71 /* ServiceApi.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				C1521BC4265C0CC3004B2E71 /* SceneDelegate.swift in Sources */,
 				C1521C02265C2890004B2E71 /* New.swift in Sources */,
 				C1521BE1265C0E57004B2E71 /* News.swift in Sources */,
+				C1521C6B265D2646004B2E71 /* ServiceApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
