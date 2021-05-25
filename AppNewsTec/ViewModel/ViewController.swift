@@ -23,9 +23,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         posterNews.delegate = self
         listNews = requestApi.makeRequest()
         
-        
+      
     }
     
+    @IBAction func editButtonTapped() -> Void {
+        
+    }
     
     //MARK: Variables:
     
@@ -57,5 +60,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        UIApplication.shared.open(URL(string: listNews[indexPath.row].url)!)
+       
+    }
+    
+    
+   
 }
 

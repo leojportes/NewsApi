@@ -13,7 +13,7 @@ import Foundation
 
 // MARK: - Article
 struct New: Codable {
-//    let author: String
+    let author: String
     let title: String
     let articleDescription: String
     let url: String
@@ -22,7 +22,7 @@ struct New: Codable {
 //    let content: String
 
     enum CodingKeys: String, CodingKey {
-//      case author
+        case author
         case title
         case articleDescription = "description"
         case url
