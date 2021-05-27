@@ -13,22 +13,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     //MARK: Variables:
-    
-    let newsTypesVC = NewsTypesViewController()
     let requestApi = RequestNews()
     var listNews = [Article]()
     var linkUrl = ""
-    
+    var getCategory = ""
     
     
     //MARK: LifeCycle:
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         posterNews.dataSource = self
         posterNews.delegate = self
         listNews = requestApi.makeRequest(url: self.linkUrl)
+        getCategoryLabel()
     }
     
 
@@ -58,12 +56,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
         UIApplication.shared.open(URL(string: listNews[indexPath.row].url)!)
-        
     }
     
     
-   
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    func getCategoryLabel(){
+        self.categoryLabel.text = getCategory
+    }
 }
 

@@ -16,10 +16,14 @@ class RequestNews {
     
 //    let urlApi = "https://newsapi.org/v2/everything?q=tecnologia&language=pt&apiKey="
 //
+  
+
+
+
     
     func makeRequest(url: String) -> [Article] {
         
-        if let url = URL(string: (url)+apiKey)  {
+        if let url = URL(string: firstPointUrl+(url)+languageArticlesUrl+apiKey)  {
             if let data = try? Data(contentsOf: url) {
                 var news: [Article] = []
                 let decoder = JSONDecoder()
@@ -31,6 +35,7 @@ class RequestNews {
         }
          return []
     }
+    
  
 }
 
