@@ -8,12 +8,9 @@
 import Foundation
 
 
-
-
-
-struct News: Codable {
+struct Articles: Codable {
     
-    let articles: [New]
+    let articles: [Article]
     enum CodingKeys: String, CodingKey {
         case articles
     }

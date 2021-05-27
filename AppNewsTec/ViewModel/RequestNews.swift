@@ -8,28 +8,30 @@
 
 import Foundation
 
+
+
 class RequestNews {
 
-    let apiRequest = "https://newsapi.org/v2/everything?q=tecnologia&language=pt&apiKey="
-   
-    var url: String {
-        return apiRequest
-    }
     
-    func makeRequest() -> [New] {
-        if let url = URL(string: (apiRequest)+apiKey)  {
+    
+//    let urlApi = "https://newsapi.org/v2/everything?q=tecnologia&language=pt&apiKey="
+//
+    
+    func makeRequest(url: String) -> [Article] {
+        
+        if let url = URL(string: (url)+apiKey)  {
             if let data = try? Data(contentsOf: url) {
-                var news: [New] = []
+                var news: [Article] = []
                 let decoder = JSONDecoder()
-                if let newsJson = try? decoder.decode(News.self, from: data) {
+                if let newsJson = try? decoder.decode(Articles.self, from: data) {
                     news = newsJson.articles
                     return news
                 }
             }
         }
-        return []
-        
+         return []
     }
+ 
 }
 
 

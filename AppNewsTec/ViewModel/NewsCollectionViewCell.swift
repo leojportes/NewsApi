@@ -10,18 +10,13 @@ import AlamofireImage
 
 class NewsCollectionViewCell: UICollectionViewCell {
     
- 
-    var listNews = [New]()
     
     @IBOutlet weak var titleNews: UILabel!
     
     @IBOutlet weak var overviewNews: UILabel!
     
     @IBOutlet weak var posterNews: UIImageView!
-    
-    
 
-    
     
     
 }

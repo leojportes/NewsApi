@@ -11,7 +11,14 @@ import AlamofireImage
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-
+    
+    //MARK: Variables:
+    
+    let newsTypesVC = NewsTypesViewController()
+    let requestApi = RequestNews()
+    var listNews = [Article]()
+    var linkUrl = ""
+    
     
     
     //MARK: LifeCycle:
@@ -21,20 +28,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
      
         posterNews.dataSource = self
         posterNews.delegate = self
-        listNews = requestApi.makeRequest()
-        
-      
+        listNews = requestApi.makeRequest(url: self.linkUrl)
     }
     
-    @IBAction func editButtonTapped() -> Void {
-        
-    }
-    
-    //MARK: Variables:
-    
-    let requestApi = RequestNews()
-    var listNews = [New]()
-    
+
     
     //MARK: Outlets:
     
@@ -63,7 +60,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         UIApplication.shared.open(URL(string: listNews[indexPath.row].url)!)
-       
+        
     }
     
     

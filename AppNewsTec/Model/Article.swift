@@ -8,11 +8,8 @@
 import Foundation
 
 
-
-
-
 // MARK: - Article
-struct New: Codable {
+struct Article: Codable {
     let author: String
     let title: String
     let articleDescription: String
@@ -29,4 +26,5 @@ struct New: Codable {
         case urlToImage
 //      case publishedAt, content
     }
+    
 }
